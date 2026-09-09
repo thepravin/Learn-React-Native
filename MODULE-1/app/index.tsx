@@ -3,6 +3,7 @@ import {
   FlatList,
   Pressable,
   ScrollView,
+  SectionList,
   StyleSheet,
   Text,
   TextInput,
@@ -224,6 +225,195 @@ export const vegetables: Vegetable[] = [
   },
 ];
 
+export interface VegItem {
+  id: string;
+  name: string;
+  image: string;
+}
+
+export interface VegSection {
+  title: string;
+  data: VegItem[];
+}
+
+export const vegSections: VegSection[] = [
+  {
+    title: "Root Vegetables",
+    data: [
+      {
+        id: "root-1",
+        name: "Carrot",
+        image: "https://images.unsplash.com/photo-1598170845058-32b9d6a5c317?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "root-2",
+        name: "Radish",
+        image: "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "root-3",
+        name: "Beetroot",
+        image: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+  {
+    title: "Leafy Greens",
+    data: [
+      {
+        id: "leaf-1",
+        name: "Spinach",
+        image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "leaf-2",
+        name: "Romaine Lettuce",
+        image: "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "leaf-3",
+        name: "Kale",
+        image: "https://images.unsplash.com/photo-1524179091875-bf99a9a6fa57?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+  {
+    title: "Cruciferous",
+    data: [
+      {
+        id: "cruc-1",
+        name: "Broccoli",
+        image: "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "cruc-2",
+        name: "Cauliflower",
+        image: "https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "cruc-3",
+        name: "Green Cabbage",
+        image: "https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+  {
+    title: "Nightshades",
+    data: [
+      {
+        id: "night-1",
+        name: "Tomato",
+        image: "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "night-2",
+        name: "Eggplant",
+        image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "night-3",
+        name: "Bell Pepper",
+        image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+  {
+    title: "Alliums",
+    data: [
+      {
+        id: "allium-1",
+        name: "Red Onion",
+        image: "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "allium-2",
+        name: "Garlic",
+        image: "https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "allium-3",
+        name: "Spring Onion",
+        image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+  {
+    title: "Tubers",
+    data: [
+      {
+        id: "tuber-1",
+        name: "Potato",
+        image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "tuber-2",
+        name: "Sweet Potato",
+        image: "https://images.unsplash.com/photo-1596097635121-14b63b7a0c19?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+  {
+    title: "Gourds & Squashes",
+    data: [
+      {
+        id: "gourd-1",
+        name: "Cucumber",
+        image: "https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "gourd-2",
+        name: "Zucchini",
+        image: "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+  {
+    title: "Legumes & Pods",
+    data: [
+      {
+        id: "legume-1",
+        name: "Green Peas",
+        image: "https://images.unsplash.com/photo-1587735243615-c03f25aaff15?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "legume-2",
+        name: "Green Beans",
+        image: "https://images.unsplash.com/photo-1567375698348-5d9d5ae99de0?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+  {
+    title: "Mushrooms",
+    data: [
+      {
+        id: "fungus-1",
+        name: "Button Mushroom",
+        image: "https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "fungus-2",
+        name: "Portobello",
+        image: "https://images.unsplash.com/photo-1589135233689-d56d6168e9e1?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+  {
+    title: "Stems & Shoots",
+    data: [
+      {
+        id: "stem-1",
+        name: "Asparagus",
+        image: "https://images.unsplash.com/photo-1515471204630-e60b3799863d?w=500&auto=format&fit=crop&q=60",
+      },
+      {
+        id: "stem-2",
+        name: "Celery",
+        image: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=500&auto=format&fit=crop&q=60",
+      },
+    ],
+  },
+];
+
 const index = () => {
   return (
     // <ScrollView>
@@ -269,36 +459,59 @@ const index = () => {
     //   </Pressable>
     // </ScrollView>
 
-    // FlatList
+    //********** FlatList ********************
 
-    <View style={styles.container}>
-      <FlatList
-        data={vegetables}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <View style={styles.card}>
-            <Image
-              source={{ uri: item.image }}
-              style={{
-                width: 80,
-                height: 80,
-                borderRadius: 8,
-                marginRight: 10,
-              }}
-              contentFit="cover"
-            />
-            <Text style={styles.title}>{item.name}</Text>
-          </View>
-        )}
-        // horizontal={true}
-        // numColumns={2}
-        ListHeaderComponent={() => <Text>Header</Text>}
-        ListFooterComponent={() => <Text>Footer</Text>}
-        ItemSeparatorComponent={() => (
-          <View style={{ height: 10, backgroundColor: "#ccc" }} />
-        )}
+    // <View style={styles.container}>
+    //   <FlatList
+    //     data={vegetables}
+    //     keyExtractor={(item) => item.id}
+    //     renderItem={({ item }) => (
+    //       <View style={styles.card}>
+    //         <Image
+    //           source={{ uri: item.image }}
+    //           style={{
+    //             width: 80,
+    //             height: 80,
+    //             borderRadius: 8,
+    //             marginRight: 10,
+    //           }}
+    //           contentFit="cover"
+    //         />
+    //         <Text style={styles.title}>{item.name}</Text>
+    //       </View>
+    //     )}
+    //     // horizontal={true}
+    //     // numColumns={2}
+    //     ListHeaderComponent={() => <Text>Header</Text>}
+    //     ListFooterComponent={() => <Text>Footer</Text>}
+    //     ItemSeparatorComponent={() => (
+    //       <View style={{ height: 10, backgroundColor: "#ccc" }} />
+    //     )}
+    //   />
+    // </View>
+
+    // ***************** sectionlist ****************
+   <SectionList
+   sections={vegSections}
+   keyExtractor={(item)=>item.id}
+
+   renderItem={({item})=>(
+    <View style={styles.card}>
+      <Image
+      source={{uri:item.image}}
+      style={styles.image}
       />
+      <Text style={styles.title}>{item.name}</Text>
     </View>
+   )}
+
+   renderSectionHeader={({section})=>(
+    <Text style={styles.header} >{section.title}</Text>
+   )}
+   
+   />
+
+
   );
 };
 
@@ -324,4 +537,8 @@ const styles = StyleSheet.create({
   container: {
     margin: 10,
   },
+  header:{
+    fontSize: 20,
+    color:"#841584"
+  }
 });
