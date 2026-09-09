@@ -14,3 +14,9 @@ Essential core components
 
 # Pressable :
 - detect various stages of press interactions on any of its defined children
+
+# FlatList :
+- simple list
+
+
+# SectionList 
