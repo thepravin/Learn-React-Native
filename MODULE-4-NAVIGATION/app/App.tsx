@@ -5,6 +5,7 @@ import { Pressable, Text } from "react-native";
 import About from "./screens/about";
 import Details from "./screens/details";
 import HOME from "./screens/home";
+import ModalScreen from "./screens/model-screen";
 import TabDetails from "./tab-screens/details";
 import TabHome from "./tab-screens/home";
 import TabProfile from "./tab-screens/profile";
@@ -127,11 +128,27 @@ function RootStack() {
         }}
       />
       <Stack.Screen name="about" component={About} />
+
+      <Stack.Screen
+        name="model"
+        component={ModalScreen}
+        options={{
+          title: "Model title",
+
+          // presentation: "formSheet",
+          // sheetAllowedDetents: [0.5, 0.9], // Can slide between 50% and 90%
+          // sheetGrabberVisible: true, // Shows the little handle bar at the top
+          // gestureEnabled: false,
+
+          presentation: "modal",
+          animation: "slide_from_bottom",
+        }}
+      />
     </Stack.Navigator>
   );
 }
 
 export default function App() {
-  // return <RootStack />;
-  return <TabNavigator />;
+  return <RootStack />;
+  // return <TabNavigator />;
 }
