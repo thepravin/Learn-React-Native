@@ -12,7 +12,14 @@ const home = () => {
     //   <Link screen={"about"}>Go to about page</Link>
     // </View>
 
-    <Pressable onPress={() => navigation.navigate("details screen top")}>
+    <Pressable
+      onPress={() =>
+        navigation.navigate("details screen top", {
+          itemId: 42,
+          otherParam: "Hellow from home screen",
+        })
+      }
+    >
       <Text>Go to details with useNavigation</Text>
     </Pressable>
   );
