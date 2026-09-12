@@ -1,5 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Pressable, Text } from "react-native";
 import About from "./screens/about";
@@ -13,6 +14,8 @@ import TabProfile from "./tab-screens/profile";
 const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
+
+const Drawer = createDrawerNavigator();
 
 function TabNavigator() {
   return (
@@ -148,7 +151,17 @@ function RootStack() {
   );
 }
 
+function MyDrawer() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name="home" component={TabHome} />
+      <Drawer.Screen name="profile" component={TabProfile} />
+    </Drawer.Navigator>
+  );
+}
+
 export default function App() {
-  return <RootStack />;
+  // return <RootStack />;
   // return <TabNavigator />;
+  return <MyDrawer />;
 }
