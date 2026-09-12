@@ -8,7 +8,18 @@ const Stack = createNativeStackNavigator();
 
 function RootStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        // common screen options/styling
+        headerStyle: {
+          backgroundColor: "#222",
+        },
+        headerTitleStyle: {
+          fontWeight: "bold",
+          color: "#fff",
+        },
+      }}
+    >
       <Stack.Screen
         name="home screen top"
         component={HOME}
@@ -40,6 +51,13 @@ function RootStack() {
         name="details screen top"
         component={Details}
         initialParams={{ itemId: 1000 }}
+        options={{
+          // change back arrow styling
+
+          headerTintColor: "#00E0FF",
+          // headerTitle: "Back Button",
+          headerBackButtonDisplayMode: "minimal",
+        }}
       />
       <Stack.Screen name="about" component={About} />
     </Stack.Navigator>
