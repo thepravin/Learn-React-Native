@@ -15,7 +15,7 @@ const home = () => {
     <Pressable
       onPress={() =>
         navigation.navigate("details screen top", {
-          itemId: 42,
+          // itemId: 42,
           otherParam: "Hellow from home screen",
         })
       }

@@ -9,7 +9,11 @@ function RootStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="home screen top" component={HOME} />
-      <Stack.Screen name="details screen top" component={Details} />
+      <Stack.Screen
+        name="details screen top"
+        component={Details}
+        initialParams={{ itemId: 1000 }}
+      />
       <Stack.Screen name="about" component={About} />
     </Stack.Navigator>
   );
