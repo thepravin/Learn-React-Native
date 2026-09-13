@@ -5,15 +5,16 @@ export default function Index() {
   return (
     <View
       style={{
-        flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        gap: 10,
+        gap: 15,
       }}
     >
       <Link href={"/Feed"}>Feed</Link>
       <Link href={"/Explore"}>Explore</Link>
       <Link href={"/profile/User"}>Profile/User</Link>
+
+      {/* dynamic routing */}
       <Link href={"/users/12/posts/009"}>/user/[userId]/posts/[postId]</Link>
       <Link
         href={{
@@ -26,6 +27,11 @@ export default function Index() {
       >
         /user/[userId]/posts/[postId] : 2
       </Link>
+
+      {/* catching all routes */}
+
+      <Link href={"/admin/users/logs"}>Go logs</Link>
+      <Link href={"/admin/reports/monthly"}>Monthly reports</Link>
     </View>
   );
 }
