@@ -1,5 +1,5 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 
 export default function Index() {
   return (
@@ -8,12 +8,24 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        gap: 10,
       }}
     >
-      <Text>index.tsx</Text>
       <Link href={"/Feed"}>Feed</Link>
       <Link href={"/Explore"}>Explore</Link>
       <Link href={"/profile/User"}>Profile/User</Link>
+      <Link href={"/users/12/posts/009"}>/user/[userId]/posts/[postId]</Link>
+      <Link
+        href={{
+          pathname: "/users/[userId]/posts/[postId]",
+          params: {
+            userId: "11112",
+            postId: "00009",
+          },
+        }}
+      >
+        /user/[userId]/posts/[postId] : 2
+      </Link>
     </View>
   );
 }
