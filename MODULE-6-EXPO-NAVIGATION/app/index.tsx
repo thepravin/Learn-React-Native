@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { Href, Link } from "expo-router";
 import { View } from "react-native";
 
 export default function Index() {
@@ -15,7 +15,9 @@ export default function Index() {
       <Link href={"/profile/User"}>Profile/User</Link>
 
       {/* dynamic routing */}
-      <Link href={"/users/12/posts/009"}>/user/[userId]/posts/[postId]</Link>
+      <Link href={"/users/12/posts/009" as Href}>
+        /user/[userId]/posts/[postId]
+      </Link>
       <Link
         href={{
           pathname: "/users/[userId]/posts/[postId]",
@@ -30,8 +32,11 @@ export default function Index() {
 
       {/* catching all routes */}
 
-      <Link href={"/admin/users/logs"}>Go logs</Link>
-      <Link href={"/admin/reports/monthly"}>Monthly reports</Link>
+      <Link href={"/admin/users/logs" as Href}>Go logs</Link>
+      <Link href={"/admin/reports/monthly" as Href}>Monthly reports</Link>
+
+      {/* custom not found */}
+      <Link href={"/Feed/notfound" as Href}>Feed not found page</Link>
     </View>
   );
 }
