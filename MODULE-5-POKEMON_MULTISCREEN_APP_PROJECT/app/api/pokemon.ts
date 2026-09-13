@@ -72,7 +72,7 @@ export const getPokemonDetail = async (
   return response.json();
 };
 
-export const getPokemonByType = async (type: string): Promise<PokemonRef> => {
+export const getPokemonByType = async (type: string): Promise<PokemonRef[]> => {
   const res = await fetch(`${BASE_URL}/type/${type}`);
   if (!res.ok) {
     throw new Error("Failed to fetch pokemon list");
