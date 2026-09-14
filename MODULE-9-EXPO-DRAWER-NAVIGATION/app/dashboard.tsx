@@ -1,12 +1,9 @@
+import DashboardScreen from "@/components/dashboard";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 
 const dashboard = () => {
-  return (
-    <View>
-      <Text>dashboard</Text>
-    </View>
-  );
+  return <DashboardScreen />;
 };
 
 export default dashboard;
