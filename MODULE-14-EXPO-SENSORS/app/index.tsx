@@ -1,4 +1,4 @@
-import Compass from "@/components/Compass";
+import LightMood from "@/components/LightMood";
 import { View } from "react-native";
 
 export default function Index() {
@@ -12,7 +12,8 @@ export default function Index() {
     >
       {/* <TitleCounter />  {/* Accelerometer */}
       {/* <RotationIndicator /> */}
-      <Compass />
+      {/* <Compass /> */}
+      <LightMood />
     </View>
   );
 }
