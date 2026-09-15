@@ -1,4 +1,4 @@
-import TitleCounter from "@/components/TitleCounter";
+import RotationIndicator from "@/components/RotationIndicator";
 import { View } from "react-native";
 
 export default function Index() {
@@ -10,7 +10,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <TitleCounter />
+      {/* <TitleCounter />  {/* Accelerometer */}
+      <RotationIndicator />
     </View>
   );
 }
