@@ -15,3 +15,7 @@
   - compass screen
   - directional maps
   -
+
+# Pedometer :
+
+- tracks setps
