@@ -1,4 +1,4 @@
-import RotationIndicator from "@/components/RotationIndicator";
+import Compass from "@/components/Compass";
 import { View } from "react-native";
 
 export default function Index() {
@@ -11,7 +11,8 @@ export default function Index() {
       }}
     >
       {/* <TitleCounter />  {/* Accelerometer */}
-      <RotationIndicator />
+      {/* <RotationIndicator /> */}
+      <Compass />
     </View>
   );
 }

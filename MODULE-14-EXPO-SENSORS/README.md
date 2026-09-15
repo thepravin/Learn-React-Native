@@ -8,3 +8,10 @@
 - how quickly your device is rotating ( spinning motion)
   - sterring in a racing game
   - camera rotation control
+
+# Magnetometer :
+
+- magnetic fiel
+  - compass screen
+  - directional maps
+  -
