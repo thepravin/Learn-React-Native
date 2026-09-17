@@ -1,4 +1,4 @@
-import NetworkDetails from "@/components/NetworkDetails";
+import DeepLinking from "@/components/linking/DeepLinking";
 import { View } from "react-native";
 
 export default function Index() {
@@ -12,7 +12,9 @@ export default function Index() {
     >
       {/* <NetworkCheck /> */}
       {/* <NetworkListener /> */}
-      <NetworkDetails />
+      {/* <NetworkDetails /> */}
+      {/* <BasicLinking /> */}
+      <DeepLinking />
     </View>
   );
 }
