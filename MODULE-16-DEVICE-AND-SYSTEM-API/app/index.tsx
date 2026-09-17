@@ -1,4 +1,4 @@
-import DeepLinking from "@/components/linking/DeepLinking";
+import BatteryExample from "@/components/battery/BatteryExample";
 import { View } from "react-native";
 
 export default function Index() {
@@ -14,7 +14,10 @@ export default function Index() {
       {/* <NetworkListener /> */}
       {/* <NetworkDetails /> */}
       {/* <BasicLinking /> */}
-      <DeepLinking />
+      {/* <DeepLinking /> */}
+      {/* <PressHaptics /> */}
+      {/* <App /> */}
+      <BatteryExample />
     </View>
   );
 }
